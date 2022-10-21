@@ -14,11 +14,11 @@ const Description = () => {
         <>
             {
                 Data.filter(movie => movie.title === title).map((movie, index) => (
-                    <div style={containerStyle} key={index}>
+                    <div key={index}>
                         <h1>{movie.title}</h1>
                         <p>{movie.description}</p>
                         <iframe width="560" height="315" 
-                        src={`${movie.src}?autoplay=1&mute=0`} 
+                        src={`${movie.src}`} 
                         title=""
                        ></iframe>
                        <div className="btn btn-primary"
@@ -30,19 +30,5 @@ const Description = () => {
             }
         </>
     )
-}
-const containerStyle = {
-    background: "#1f4037",
-    width: "900px",
-    height: "100%",
-    marginTop: "6em",
-    marginBottom: "20px",
-    marginLeft: "200px",
-    borderRadius: "10px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "10px"
 }
 export default Description
